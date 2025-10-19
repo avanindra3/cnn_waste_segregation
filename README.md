@@ -1,2 +1,17 @@
-# cnn_waste_segregation
-A waste material classification system using Convolutional Neural Networks (CNNs) to automate the sorting of waste into distinct categories.
+# Waste Segregation Using CNN for Waste Management
+## Objective
+This is a waste material classification system using Convolutional NeuralNetworks (CNNs) to automate the sorting of waste into distinct categories. This project applies deeplearning techniques to enhance recycling efficiency, reduce environmental pollution, and promotesustainable waste management practices. Here we will:
+- Train and fine-tune a CNN model to classify waste such as cardboard, glass, paper, and plastic.
+- Evaluate model accuracy using performance metrics such as precision, recall, and F1-score.
+- Gain insights into the role of AI in sustainable environmental solutions.
+## Business Value
+Improper waste disposal contributes to environmental degradation, increased landfill waste, andinefficient recycling processes. Manual sorting is labour-intensive, error-prone, and costly. An AI-powered waste classification system addresses these challenges by streamlining waste segregation,reducing operational costs, and improving recycling rates.
+
+Key business benefits include:
+- Automated waste sorting, cutting time and labour
+- Increased recycling rated by precise classification of recyclables
+
+Use Cases:
+- Smart Recycling Bins
+- Automated Waste Sorting Facilities
+- Waste Monitoring and Reporting
