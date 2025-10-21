@@ -1,0 +1,42 @@
+Findings About the Data
+Based on the data analysis and model training, here are the key findings:
+- The dataset consists of images of 7 different waste material categories: Cardboard, Food Waste, Glass, Metal, Other, Paper, and Plastic.
+- The distribution of images across these classes was visualized using a bar plot, showing the number of images available for each category.
+- The data have a slight class imbalance issue. The count of images tagged as plastic is significantly more than other labels.
+- All images in the dataset have a consistent size of 256x256 pixels. For model training, these images were resized to 128x128 pixels to reduce the computational complexity and training time.
+- The class labels were successfully encoded using one-hot encoding for use in the classification models.
+- The dataset was split into training (70%) and validation (30%) sets, with stratification to ensure similar class distribution in both sets.
+
+Model Training Results
+Three different CNN model configurations were built and trained:
+
+Model 1
+A basic CNN with three convolutional layers, followed by max pooling, batch normalization, flatten, dropout, and dense layers.
+
+Training was performed for 50 epochs without early stopping or learning rate reduction.
+Validation Accuracy: 60.23%
+Validation Loss: 1.5154
+
+Model 2
+This model is similar to Model 1, but with Batch Normalization layers added after each MaxPooling layer.
+
+Training was performed for 50 epochs with Early Stopping and ReduceLROnPlateau callbacks.
+Validation Accuracy: 46.42%
+Validation Loss: 1.5029
+
+Model 3
+This model is similar to Model 2, but with an additional dense layer of 128 neurons and an additional dropout layer.
+
+Training was performed for 50 epochs without early stopping or learning rate reduction.
+Validation Accuracy: 60.31%
+Validation Loss: 1.2030
+
+Comparison of Model Performance:
+Comparing the validation accuracies, Model 3 achieved the highest accuracy of 60.31%, followed closely by Model 1 with 60.23%. Model 2 had the lowest validation accuracy of 46.42%.
+
+The training history plots show that Model 1 and Model 3 had similar training and validation loss and accuracy curves, with some fluctuations, suggesting potential for further optimization. Model 2 showed signs of overfitting early on, which was likely addressed by the callbacks, but still resulted in lower overall accuracy. However, it is noticed that traning the model for 50 epochs increases the model performance and the performance of Model 2 can be increase by removing early stopping and training to full 50 epochs.
+
+The confusion matrices provide a detailed view of how each model performed on individual classes. They show which classes are being predicted correctly and where the models are making errors. For example, by examining the confusion matrices, we can identify which waste categories are most easily confused by each model.
+
+Overall:
+Model 3 appears to be the best-performing model among the three configurations tested based on validation accuracy. However, further experimentation with hyperparameters, data augmentation techniques, and potentially different model architectures could lead to improved performance.
